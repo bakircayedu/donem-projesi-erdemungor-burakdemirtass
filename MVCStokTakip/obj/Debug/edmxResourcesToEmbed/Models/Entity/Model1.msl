@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DbMvcStokModelStoreContainer" CdmEntityContainer="DbMvcStokEntities">
+    <EntitySetMapping Name="tblKategori">
+      <EntityTypeMapping TypeName="DbMvcStokModel.tblKategori">
+        <MappingFragment StoreEntitySet="tblKategori">
+          <ScalarProperty Name="kategoriId" ColumnName="kategoriId" />
+          <ScalarProperty Name="kategoriAd" ColumnName="kategoriAd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblMusteri">
+      <EntityTypeMapping TypeName="DbMvcStokModel.tblMusteri">
+        <MappingFragment StoreEntitySet="tblMusteri">
+          <ScalarProperty Name="durum" ColumnName="durum" />
+          <ScalarProperty Name="musteriId" ColumnName="musteriId" />
+          <ScalarProperty Name="musteriAd" ColumnName="musteriAd" />
+          <ScalarProperty Name="musteriSoyad" ColumnName="musteriSoyad" />
+          <ScalarProperty Name="musteriSehir" ColumnName="musteriSehir" />
+          <ScalarProperty Name="musteriBakiye" ColumnName="musteriBakiye" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPersonel">
+      <EntityTypeMapping TypeName="DbMvcStokModel.tblPersonel">
+        <MappingFragment StoreEntitySet="tblPersonel">
+          <ScalarProperty Name="personelId" ColumnName="personelId" />
+          <ScalarProperty Name="personelAd" ColumnName="personelAd" />
+          <ScalarProperty Name="personelSoyad" ColumnName="personelSoyad" />
+          <ScalarProperty Name="personelDepartman" ColumnName="personelDepartman" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSatislar">
+      <EntityTypeMapping TypeName="DbMvcStokModel.tblSatislar">
+        <MappingFragment StoreEntitySet="tblSatislar">
+          <ScalarProperty Name="satisId" ColumnName="satisId" />
+          <ScalarProperty Name="satisUrun" ColumnName="satisUrun" />
+          <ScalarProperty Name="satisPersonel" ColumnName="satisPersonel" />
+          <ScalarProperty Name="satisMusteri" ColumnName="satisMusteri" />
+          <ScalarProperty Name="satisFiyat" ColumnName="satisFiyat" />
+          <ScalarProperty Name="satisTarih" ColumnName="satisTarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUrunler">
+      <EntityTypeMapping TypeName="DbMvcStokModel.tblUrunler">
+        <MappingFragment StoreEntitySet="tblUrunler">
+          <ScalarProperty Name="durum" ColumnName="durum" />
+          <ScalarProperty Name="urunId" ColumnName="urunId" />
+          <ScalarProperty Name="urunAd" ColumnName="urunAd" />
+          <ScalarProperty Name="urunMarka" ColumnName="urunMarka" />
+          <ScalarProperty Name="urunStok" ColumnName="urunStok" />
+          <ScalarProperty Name="urunAlisFiyat" ColumnName="urunAlisFiyat" />
+          <ScalarProperty Name="urunSatisFiyat" ColumnName="urunSatisFiyat" />
+          <ScalarProperty Name="urunKategori" ColumnName="urunKategori" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAdmin">
+      <EntityTypeMapping TypeName="DbMvcStokModel.tblAdmin">
+        <MappingFragment StoreEntitySet="tblAdmin">
+          <ScalarProperty Name="sifre" ColumnName="sifre" />
+          <ScalarProperty Name="kullanici" ColumnName="kullanici" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

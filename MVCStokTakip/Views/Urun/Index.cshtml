@@ -1,0 +1,47 @@
+﻿@using MVCStokTakip.Models.Entity
+@model List<tblUrunler>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayaout.cshtml";
+}
+@using(Html.BeginForm("Index","Urun",FormMethod.Get))
+            {
+    <p>
+        Ürün Adı:@Html.TextBox("p");
+        <input type="submit" value="Ara"/>
+    </p>
+            }
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>ÜRÜN ADI</th>
+        <th>MARKA</th>
+        <th>STOK</th>
+        <th>ALIŞ FİYAT</th>,
+        <th>SATIŞ FİYAT FİYAT</th>
+        <th>KATEGORİ</th>
+
+
+
+    </tr>
+    @foreach (var x in Model)
+    {
+<tr>
+    <td>@x.urunId</td>
+    <td>@x.urunAd</td>
+    <td>@x.urunMarka</td>
+    <td>@x.urunStok</td>
+    <td>@x.urunAlisFiyat</td>
+    <td>@x.urunSatisFiyat</td>
+    <td>@x.tblKategori.kategoriAd</td>
+
+    <td><a href="/Urun/UrunSil/@x.urunId" class="btn btn-danger">Sil</a></td>
+    <td><a href="/Urun/UrunGetir/@x.urunId" class="btn btn-success">Güncelle</a></td>
+
+
+</tr>
+    }
+</table>
+<a href="/Urun/YeniUrun/" class="btn btn-primary">Yeni Ürün Girişi</a>
+
